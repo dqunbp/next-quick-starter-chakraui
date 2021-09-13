@@ -6,6 +6,7 @@ import LangSwitcher from "components/language-switcher";
 import { useQuery } from "react-query";
 import { getHello } from "requests/hello";
 import { useLingui } from "@lingui/react";
+import { Box } from "@chakra-ui/layout";
 
 function Home() {
   const query = useQuery("hello", getHello);
@@ -13,37 +14,81 @@ function Home() {
   const { i18n } = useLingui();
 
   return (
-    <div className="min-h-screen py-0 px-2 flex flex-col justify-center items-center">
+    <Box
+      minH="100vh"
+      py={0}
+      px={2}
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Head>
         {/* <Trans> doesnt works here */}
         <title>{i18n._(t`Create Next App`)}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="py-20 px-0 flex flex-1 flex-col justify-center items-center">
+      <Box
+        as="main"
+        py={20}
+        px={0}
+        display="flex"
+        flex={1}
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+      >
         <LangSwitcher />
-        <h1 className="m-0 leading-tight text-6xl text-center">
+        <Box as="h1" m={0} letterSpacing={1} fontSize="6xl" textAlign="center">
           <Trans>Welcome to</Trans>{" "}
-          <a
-            className="text-blue-600 no-underline hover:underline focus:underline active:underline"
+          <Box
+            as="a"
+            textColor="blue.500"
+            textDecoration="none"
+            _hover={{ textDecoration: "underline" }}
+            _focus={{ textDecoration: "underline" }}
+            _active={{ textDecoration: "underline" }}
             href="https://nextjs.org"
           >
             Next.js!
-          </a>
-        </h1>
+          </Box>
+        </Box>
 
-        <p className="text-center leading-normal text-2xl mt-4">
+        <Box
+          as="p"
+          textAlign="center"
+          letterSpacing={1.2}
+          fontSize="2xl"
+          mt={4}
+        >
           <Trans>Get started by editing</Trans>{" "}
-          <code className="font-mono text-lg p-3">pages/index.js</code>
-        </p>
+          <Box as="code" fontFamily="mono" fontSize="lg" p={3}>
+            pages/index.js
+          </Box>
+        </Box>
 
-        <code className="bg-gray-50 rounded-md text-lg font-mono">
+        <Box
+          as="code"
+          bg="gray.50"
+          rounded="md"
+          fontSize="lg"
+          fontFamily="mono"
+        >
           {query.isLoading
             ? i18n._(t`Fetches the hello api...`)
             : i18n._(t`API Response:`) + ` ${JSON.stringify(query.data)}`}
-        </code>
+        </Box>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center flex-wrap max-w-screen-md mt-12">
+        <Box
+          display="flex"
+          flexDirection={["column", "row"]}
+          alignItems="center"
+          justifyContent="center"
+          flexWrap="wrap"
+          maxW="container.md"
+          mt={12}
+        >
           <a
             href="https://nextjs.org/docs"
             style={{ flexBasis: "45%" }}
@@ -111,8 +156,8 @@ function Home() {
               </Trans>
             </p>
           </a>
-        </div>
-      </main>
+        </Box>
+      </Box>
 
       <footer className="w-full h-24 border-t flex justify-center items-center">
         <a
@@ -125,7 +170,7 @@ function Home() {
           <img className="ml-2 h-4" src="/vercel.svg" alt="Vercel Logo" />
         </a>
       </footer>
-    </div>
+    </Box>
   );
 }
 
