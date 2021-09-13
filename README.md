@@ -6,7 +6,7 @@
 
 - [lingui.js](https://lingui.js.org/index.html)
 - [react-query](https://react-query.tanstack.com/)
-- [tailwindcss](https://tailwindcss.com/)
+- [chakra-ui](https://chakra-ui.com/)
 - [typescript](https://www.typescriptlang.org/)
 - [prettier](https://prettier.io/)
 - [eslint](https://eslint.org/)
@@ -24,7 +24,7 @@
 
 - 🌊 &nbsp; Next generation css
 
-  Includes tailwindcss which makes your app styling fun and easy 🌟
+  Includes chakra-ui components which makes your app building fun and easy 🌟
 
 - 📁 &nbsp; Optimized folders structure
 
@@ -37,16 +37,6 @@
 ## Guides
 
 ### Get started
-
-[Just click here to use this repo as template](https://github.com/dqunbp/nextjs-quick-starter-tailwindcss/generate)
-
----
-
-Or clone it locally
-
-```console
-git clone https://github.com/dqunbp/nextjs-quick-starter-tailwindcss
-```
 
 Install dependencies
 
