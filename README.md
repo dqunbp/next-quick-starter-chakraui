@@ -54,7 +54,11 @@ Install dependencies
 npm i
 ```
 
-Run project
+Compile messages and Run project
+
+```console
+npm run compile
+```
 
 ```console
 npm run dev

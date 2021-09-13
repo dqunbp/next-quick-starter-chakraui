@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-quick-starter-tailwindcss",
+  "name": "nextjs-quick-starter-chakraui",
   "version": "0.1.0",
   "private": true,
   "author": "dqunbp",
@@ -10,7 +10,8 @@
     "react",
     "ssr",
     "ssg",
-    "tailwindcss",
+    "chakraui",
+    "chakra-ui",
     "react-query",
     "lingui.js",
     "i18n",
@@ -42,9 +43,13 @@
     }
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.7",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@lingui/react": "^3.7.1",
     "axios": "^0.21.1",
     "cookie": "^0.4.1",
+    "framer-motion": "^4.1.17",
     "next": "^11.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -61,7 +66,6 @@
     "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
-    "autoprefixer": "^10.2.5",
     "babel-plugin-macros": "^3.1.0",
     "concurrently": "^6.0.0",
     "eslint": "^7.23.0",
@@ -71,9 +75,7 @@
     "husky": "^7.0.0",
     "lint-staged": "^11.0.0",
     "npm-watch": "^0.10.0",
-    "postcss": "^8.2.7",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.3",
     "typescript": "^4.2.3"
   },
   "lint-staged": {
